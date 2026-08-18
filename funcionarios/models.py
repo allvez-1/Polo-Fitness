@@ -1,3 +1,20 @@
 from django.db import models
 
-# Create your models here.
+
+class Instrutor(models.Model):
+    nome = models.CharField(max_length=150)
+    cpf = models.CharField(max_length=14, unique=True)
+    email = models.EmailField(unique=True)
+    telefone = models.CharField(max_length=20)
+
+    especialidade = models.CharField(max_length=100)
+
+    cref = models.CharField(
+        max_length=30,
+        unique=True
+    )
+
+    ativo = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.nome
