@@ -1,7 +1,7 @@
 from django.db import models
 
 from alunos.models import Aluno
-from funcionarios.models import Instrutor
+from instrutor.models import Instrutor
 from exercicios.models import Exercicio
 
 

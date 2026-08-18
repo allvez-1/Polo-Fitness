@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ('alunos', '0001_initial'),
         ('exercicios', '0001_initial'),
-        ('funcionarios', '0001_initial'),
+        ('instrutor', '0001_initial'),
     ]
 
     operations = [
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('descricao', models.TextField(blank=True)),
                 ('data_criacao', models.DateField(auto_now_add=True)),
                 ('aluno', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='treinos', to='alunos.aluno')),
-                ('instrutor', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='treinos', to='funcionarios.instrutor')),
+                ('instrutor', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='treinos', to='instrutor.instrutor')),
             ],
         ),
         migrations.CreateModel(
