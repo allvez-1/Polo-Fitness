@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polo Fitnes</title>
+    <title>Polo-Fitness</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Polo-Fitness</h1>
+        <p>Gerencie o sistema pelo painel administrativo.</p>
+        <a href="{% url 'admin:index' %}">Acessar administração</a>
+    </main>
 </body>
 </html>
-</html>{% extends "admin/polo_fitnes.html" %}
-
-{% block title %}
-    Polo-Fitness | Administração
-{% endblock %}
-
-{% block branding %}
-    <div id="site-name">
-        <a href="{% url 'admin:index' %}">
-            Polo-Fitness
-        </a>
-    </div>
-{% endblock %}
-
-{% block nav-global %}
-{% endblock %}
-
-
